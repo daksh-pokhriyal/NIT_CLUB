@@ -51,8 +51,15 @@ YEAR_PREFIX_MAP = {"1251": 1, "1241": 1, "1231": 2, "1221": 3, "1211": 4}
 # ─────────────────────────────────────────────────────────────────────────────
 app = FastAPI(title="NIT KKR Club Compass API")
 app.add_middleware(
-    CORSMiddleware, allow_origins=["*"], allow_credentials=True,
-    allow_methods=["*"], allow_headers=["*"]
+    CORSMiddleware,
+    allow_origins=[
+        "https://nit-club-1.onrender.com",
+        "http://localhost:3000",
+        "http://127.0.0.1:5500"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
 )
 
 db = AsyncIOMotorClient(MONGO_URL)[DB_NAME]
