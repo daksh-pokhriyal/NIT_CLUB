@@ -53,7 +53,7 @@ app = FastAPI(title="NIT KKR Club Compass API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://nit-club-compass.onrender.com",
+        "https://nit-club-1.onrender.com,
         "http://localhost:3000",
         "http://127.0.0.1:5500"
     ],
